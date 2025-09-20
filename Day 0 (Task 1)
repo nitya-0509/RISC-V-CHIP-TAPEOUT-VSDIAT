@@ -1,0 +1,68 @@
+Digital VLSI SOC Design and Planning
+
+
+1. Chip Modelling (O1)
+* The design process begins with specifications written in C model.
+
+* A testbench in C language is used for functional verification at the specification level.
+
+* This ensures early validation of the intended functionality before moving to hardware design.
+
+________________
+
+
+2. RTL Architecture (O2)
+   * Hardware is described in RTL (Verilog), which acts as the soft copy of the design.
+
+   * Major RTL components include:
+
+      * Processor Core
+
+      * Peripherals and IP blocks
+
+         * This stage bridges the high-level specification with implementable hardware.
+
+________________
+
+
+3. Synthesis and SoC Integration (O3)
+            * RTL synthesis generates the Gate-Level Netlist.
+
+            * Integration involves:
+
+               * Synthesized processor logic
+
+               * Synthesized macros (hard/soft logic)
+
+               * Analog IPs (functional RTL models)
+
+                  * SoC integration ensures all blocks (including GPIOs) are correctly connected.
+
+                  * Physical design steps (floorplanning, placement, routing, CTS) are performed.
+
+                  * Final design undergoes DRC/LVS checks, producing the GDSII file used for tapeout.
+
+________________
+
+
+4. Fabricated Chip Deployment (O4)
+                     * The fabricated chip operates at 100–130 MHz and interacts with peripherals.
+
+                     * Consistency across all design stages is ensured (O1 = O2 = O3 = O4).
+
+                     * The verified chip is deployed in real-world applications such as:
+
+                        * iWatch
+
+                        * Arduino Boards
+
+                        * TV Panels
+
+                        * AC Applications
+
+________________
+
+
+Conclusion
+The RISC-V SoC design flow moves seamlessly from C model specification → RTL design → Synthesis and SoC integration → Final Tapeout and Deployment.
+This structured process ensures functional correctness at every stage and results in reliable chips for consumer and industrial applications.
